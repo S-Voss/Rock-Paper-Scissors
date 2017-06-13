@@ -10,9 +10,19 @@
         <p>Press r, p or s to start playing!</p>
       </div>
 
-<script type="text/javascript">
+  <script type="text/javascript">
 
+    var computerChoices = ["r", "p", "s"];
+    var wins = 0;
+    var losses = 0;
+    var ties = 0;
 
+    document.onkeyup = function(event) {
+
+      var userGuess = event.key;
+      var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+      
 
 </script>
 
