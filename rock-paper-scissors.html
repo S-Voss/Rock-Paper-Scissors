@@ -22,7 +22,35 @@
       var userGuess = event.key;
       var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
-      
+      // This is the logic that determines who wins the game.
+        if ((userGuess === "r") || (userGuess === "p") || (userGuess === "s")) {
+
+            //This determines the 3 win cases
+          if (userGuess === "r" && computerGuess === "s") {
+            wins++;
+            console.log("Computer Guessed: " + computerGuess);
+            console.log("User Guessed: " +userGuess);
+          } else if (userGuess === "p" && computerGuess === "r") {
+            wins++;
+            console.log("Computer Guessed: " + computerGuess);
+            console.log("User Guessed: " +userGuess);
+          } else if (userGuess === "s" && computerGuess === "p") {
+            wins++;
+            console.log("Computer Guessed: " + computerGuess);
+            console.log("User Guessed: " +userGuess);
+
+            //This determines the tie case
+          } else if (userGuess === computerGuess) {
+            ties++;
+            console.log("Computer Guessed: " + computerGuess);
+            console.log("User Guessed: " +userGuess);
+
+            //This determines the loss case based on the idea that no other case was met
+          } else {
+            losses++;
+            console.log("Computer Guessed: " + computerGuess);
+            console.log("User Guessed: " +userGuess);
+          }
 
 </script>
 
