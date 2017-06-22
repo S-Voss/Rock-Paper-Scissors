@@ -50,9 +50,18 @@
             losses++;
             console.log("Computer Guessed: " + computerGuess);
             console.log("User Guessed: " +userGuess);
-          }
-        }
-      }
+          };
+
+        var html = "<p>Press r, p or s to start playing!</p>" +
+            "<p>wins: " + wins + "</p>" +
+            "<p>losses: " + losses + "</p>" +
+            "<p>ties: " + ties + "</p>";
+
+        // Inject the HTML created above into our div to update game stats
+        document.querySelector("#game").innerHTML = html;
+
+        };
+      };
 
 
 </script>
